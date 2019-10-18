@@ -8,8 +8,7 @@
 <body>
 
   <h1>Rock Paper Scissors Lizard Spock</h1>
-  <p>This game is played entirely in your JavaScript console. Open your 
-    console to continue.
+  <p>This game is played in the JavaScript console of your browser.
   </p>
 
   <script>
@@ -33,21 +32,25 @@
       let generatedNumber = Math.floor(Math.random()*5)
       console.log(generatedNumber);
       if (generatedNumber < 1) {
-        computerSelection = 'Rock';
+        computerSelection = 'rock';
       } else if (generatedNumber < 2) {
-        computerSelection = 'Paper';
+        computerSelection = 'paper';
       } else if (generatedNumber < 3) {
-        computerSelection = 'Scissors';
+        computerSelection = 'scissors';
       } else if (generatedNumber < 4) {
-        computerSelection = 'Lizard';
+        computerSelection = 'lizard';
       } else if (generatedNumber < 5) {
-        computerSelection = 'Spock';
+        computerSelection = 'spock';
       }
       return computerSelection;
     }
 
+    function playerSelection() {
+      userInput = prompt('Enter your choice');
+      playerSelection = userInput.toLowerCase();
+    }
 
-    let computerSelection = null;
+    playerSelection();
 
   </script>
 
