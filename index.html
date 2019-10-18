@@ -14,9 +14,9 @@
 
   <script>
 
-    // make a function called computerPlay to randomly return the computer's choice
+    // 1. *DONE* make a function called computerPlay to randomly return the computer's choice
 
-    // write a function that plays a single round of the game. It should take two
+    // 2. write a function that plays a single round of the game. It should take two
     // parameters - the playerSelection and computerSelection - and return a string
     // that declares the winner of the round like so "You Lose! Paper beats Rock". 
     // Make the function case insensitive, rock, ROCK, roCK, or any other variation
@@ -25,7 +25,29 @@
     // You want to return the call, not console.log() them. To test you can run the
     // function inside of console.log(playRound(playerSelection, computerSelection));
 
-    
+    // 3. write a new function called game(), use the previous function inside of
+    // this one to play a 5 round game that keeps score and reports a winner or loser
+    // at the end
+
+    function computerPlay() {
+      let generatedNumber = Math.floor(Math.random()*5)
+      console.log(generatedNumber);
+      if (generatedNumber < 1) {
+        computerSelection = 'Rock';
+      } else if (generatedNumber < 2) {
+        computerSelection = 'Paper';
+      } else if (generatedNumber < 3) {
+        computerSelection = 'Scissors';
+      } else if (generatedNumber < 4) {
+        computerSelection = 'Lizard';
+      } else if (generatedNumber < 5) {
+        computerSelection = 'Spock';
+      }
+      return computerSelection;
+    }
+
+
+    let computerSelection = null;
 
   </script>
 
