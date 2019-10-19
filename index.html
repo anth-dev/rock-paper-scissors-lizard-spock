@@ -124,6 +124,20 @@
         } else {
           return 'Oops! Something went wrong!';
         }
+      } else if (playerSelection == 'spock') {
+        if (computerSelection == 'spock') {
+          return 'It\'s a draw!';
+        } else if (computerSelection == 'scissors') {
+          return 'You win! Spock smashes scissors!';
+        } else if (computerSelection == 'rock') {
+          return 'You win! Spock vaporizes rock!';
+        } else if (computerSelection == 'lizard') {
+          return 'You lose! Lizard poisons Spock';
+        } else if (computerSelection == 'paper') {
+          return 'You lose! Paper disproves Spock!';
+        } else {
+          return 'Oops! Something went wrong!';
+        }
       }
     }
 
