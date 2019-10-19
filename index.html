@@ -98,7 +98,7 @@
         }
       } else if (playerSelection == 'scissors') {
         if (computerSelection == 'scissors') {
-          return 'It\'s a draw';
+          return 'It\'s a draw!';
         } else if (computerSelection == 'paper') {
           return 'You win! Scissors cuts paper!';
         } else if (computerSelection == 'lizard') {
@@ -107,6 +107,20 @@
           return 'You lose! Spock smashes scissors!';
         } else if (computerSelection == 'rock') {
           return 'You lose! Rock crushes scissors!';
+        } else {
+          return 'Oops! Something went wrong!';
+        }
+      } else if (playerSelection == 'lizard') {
+        if (computerSelection == 'lizard') {
+          return 'It\'s a draw!';
+        } else if (computerSelection == 'spock') {
+          return 'You win! Lizard poisons Spock!';
+        } else if (computerSelection == 'paper') {
+          return 'You win! Lizard eats paper!';
+        } else if (computerSelection == 'rock') {
+          return 'You lose! Rock crushes lizard!';
+        } else if (computerSelection == 'scissors') {
+          return 'You lose! Scissors decapitates lizard!';
         } else {
           return 'Oops! Something went wrong!';
         }
