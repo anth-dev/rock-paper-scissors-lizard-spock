@@ -63,10 +63,21 @@
       } else {
         alert('invalid selection');
       }
+      return userInput;
     }
 
     // write the playRound(playerSelection, computerSelection) function
-
+    function playRound(playerSelection(), computerPlay()) {
+      if (playerSelection == 'paper') {
+        if (computerSelection == 'rock' || computerSelection == 'spock') {
+          return 'You win!';
+        } else if (computerSelection == 'paper') {
+          return 'It\'s a draw!';
+        } else {
+          return 'You lose!';
+        }
+      }
+    }
 
     // console.log the rules for players
     console.log('The rules are as follows');
@@ -80,8 +91,8 @@
     console.log('Paper disproves Spock');
     console.log('Spock vaporizes Rock');
     console.log('Rock crushes Scissors');
-      
-    playerSelection();
+
+    playRound();
 
   </script>
 
