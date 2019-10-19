@@ -67,7 +67,7 @@
     }
 
     // write the playRound(playerSelection, computerSelection) function
-    function playRound(playerSelection(), computerPlay()) {
+    function playRound(playerSelection, computerPlay) {
       if (playerSelection == 'paper') {
         if (computerSelection == 'rock' || computerSelection == 'spock') {
           return 'You win!';
@@ -92,7 +92,7 @@
     console.log('Spock vaporizes Rock');
     console.log('Rock crushes Scissors');
 
-    playRound();
+    playRound(playerSelection(), computerPlay());
 
   </script>
 
