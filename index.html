@@ -82,6 +82,20 @@
         } else {
           return 'Oops! Something went wrong!';
         }
+      } else if (playerSelection == 'rock') {
+        if (computerSelection == 'rock') {
+          return 'It\'s a draw!';
+        } else if (computerSelection == 'lizard') {
+          return 'You win! Rock crushes lizard!';
+        } else if (computerSelection == 'scissors') {
+          return 'You win! Rock crushes scissors!';
+        } else if (computerSelection == 'paper') {
+          return 'You lose! Paper covers rock!';
+        } else if (computerSelection == 'spock') {
+          return 'You lose! Spock vaporizes rock!';
+        } else {
+          return 'Oops! Something went wrong!';
+        }
       }
     }
 
