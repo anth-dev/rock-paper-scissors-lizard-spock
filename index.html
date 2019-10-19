@@ -17,7 +17,7 @@
 
     // 1. *DONE* make a function called computerPlay to randomly return the computer's choice
 
-    // 2. write a function that plays a single round of the game. It should take two
+    // 2. *DONE* write a function that plays a single round of the game. It should take two
     // parameters - the playerSelection and computerSelection - and return a string
     // that declares the winner of the round like so "You Lose! Paper beats Rock". 
     // Make the function case insensitive, rock, ROCK, roCK, or any other variation
@@ -69,43 +69,70 @@
     function playRound(playerSelection, computerPlay) {
       if (playerSelection == 'paper') {
         if (computerSelection == 'paper') {
-          return 'It\'s a draw!';
+          console.log('It\'s a draw!');
+          return;
         } else if (computerSelection == 'rock') {
-          return 'You win! Paper covers rock!';
+          console.log('You win! Paper covers rock!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'spock') {
-          return 'You win! Paper disproves Spock!';
+          console.log('You win! Paper disproves Spock!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'scissors') {
-          return 'You lose! Scissors cuts paper!';
+          console.log('You lose! Scissors cuts paper!');
+          computerWon++;
+          return;
         } else if (computerSelection == 'lizard') {
-          return 'You lose! Lizard eats paper!';
+          console.log('You lose! Lizard eats paper!');
+          computerWon++;
+          return;
         } else {
           return 'Oops! Something went wrong!';
         }
       } else if (playerSelection == 'rock') {
         if (computerSelection == 'rock') {
-          return 'It\'s a draw!';
+          console.log('It\'s a draw!');
+          return;
         } else if (computerSelection == 'lizard') {
-          return 'You win! Rock crushes lizard!';
+          console.log('You win! Rock crushes lizard!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'scissors') {
-          return 'You win! Rock crushes scissors!';
+          console.log('You win! Rock crushes scissors!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'paper') {
-          return 'You lose! Paper covers rock!';
+          console.log('You lose! Paper covers rock!');
+          computerWon++;
+          return;
         } else if (computerSelection == 'spock') {
-          return 'You lose! Spock vaporizes rock!';
+          console.log('You lose! Spock vaporizes rock!');
+          computerWon++;
+          return;
         } else {
           return 'Oops! Something went wrong!';
         }
       } else if (playerSelection == 'scissors') {
         if (computerSelection == 'scissors') {
-          return 'It\'s a draw!';
+          console.log('It\'s a draw!');
+          return;
         } else if (computerSelection == 'paper') {
-          return 'You win! Scissors cuts paper!';
+          console.log('You win! Scissors cuts paper!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'lizard') {
-          return 'You win! Scissors decapitates lizard!';
+          console.log('You win! Scissors decapitates lizard!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'spock') {
-          return 'You lose! Spock smashes scissors!';
+          console.log('You lose! Spock smashes scissors!');
+          computerWon++;
+          return;
         } else if (computerSelection == 'rock') {
-          return 'You lose! Rock crushes scissors!';
+          console.log('You lose! Rock crushes scissors!');
+          computerWon++;
+          return;
         } else {
           return 'Oops! Something went wrong!';
         }
@@ -148,12 +175,21 @@
       if (rounds < 5) {
         // modify the playerSelection() and computerPlay() functions to
         // return usefull data for scoring
-        ++rounds;
+        rounds++;
         console.log('Starting round ' + rounds);
-        console.log(playRound(playerSelection(), computerPlay()));
+        playRound(playerSelection(), computerPlay());
         game();
       } else if (rounds == 5) {
         console.log('Game over!');
+        if (playerWon == computerWon) {
+          console.log('It\'s a draw! Good game!');
+        } else if (playerWon > computerWon) {
+          console.log('You win the game!');
+        } else if (playerWon < computerWon) {
+          console.log('You lose the game!');
+        } else {
+          alert('Oops! Something went wrong!');
+        }
       } else if (rounds > 5) {
         alert('Oops! Something went wrong!');
       }
@@ -175,6 +211,7 @@
     console.log('Paper disproves Spock');
     console.log('Spock vaporizes Rock');
     console.log('Rock crushes Scissors');
+    console.log('');
 
     game();
 
