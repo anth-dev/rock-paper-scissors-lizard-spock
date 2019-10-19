@@ -69,12 +69,18 @@
     // write the playRound(playerSelection, computerSelection) function
     function playRound(playerSelection, computerPlay) {
       if (playerSelection == 'paper') {
-        if (computerSelection == 'rock' || computerSelection == 'spock') {
-          return 'You win!';
-        } else if (computerSelection == 'paper') {
+        if (computerSelection == 'paper') {
           return 'It\'s a draw!';
+        } else if (computerSelection == 'rock') {
+          return 'You win! Paper covers rock!';
+        } else if (computerSelection == 'spock') {
+          return 'You win! Paper disproves Spock!';
+        } else if (computerSelection == 'scissors') {
+          return 'You lose! Scissors cuts paper!';
+        } else if (computerSelection == 'lizard') {
+          return 'You lose! Lizard eats paper!';
         } else {
-          return 'You lose!';
+          return 'Oops! Something went wrong!';
         }
       }
     }
@@ -92,7 +98,7 @@
     console.log('Spock vaporizes Rock');
     console.log('Rock crushes Scissors');
 
-    playRound(playerSelection(), computerPlay());
+    console.log(playRound(playerSelection(), computerPlay()));
 
   </script>
 
