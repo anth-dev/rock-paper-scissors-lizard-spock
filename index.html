@@ -96,11 +96,25 @@
         } else {
           return 'Oops! Something went wrong!';
         }
+      } else if (playerSelection == 'scissors') {
+        if (computerSelection == 'scissors') {
+          return 'It\'s a draw';
+        } else if (computerSelection == 'paper') {
+          return 'You win! Scissors cuts paper!';
+        } else if (computerSelection == 'lizard') {
+          return 'You win! Scissors decapitates lizard!';
+        } else if (computerSelection == 'spock') {
+          return 'You lose! Spock smashes scissors!';
+        } else if (computerSelection == 'rock') {
+          return 'You lose! Rock crushes scissors!';
+        } else {
+          return 'Oops! Something went wrong!';
+        }
       }
     }
 
     // console.log the rules for players
-    console.log('The rules are as follows');
+    console.log('The rules are as follows:');
     console.log('Scissors cuts Paper');
     console.log('Paper covers Rock');
     console.log('Rock crushes Lizard');
