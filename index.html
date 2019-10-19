@@ -140,6 +140,29 @@
       }
     }
 
+    // Make a game function which will declare variables for the total number of 
+    // rounds (up to 5), and the rounds won by the player and the computer. Once 
+    // 5 rounds have been completed do a console.log that declares the winner.
+
+    function game() {
+      if (rounds < 5) {
+        // modify the playerSelection() and computerPlay() functions to
+        // return usefull data for scoring
+        ++rounds;
+        console.log('Starting round ' + rounds);
+        console.log(playRound(playerSelection(), computerPlay()));
+        game();
+      } else if (rounds == 5) {
+        console.log('Game over!');
+      } else if (rounds > 5) {
+        alert('Oops! Something went wrong!');
+      }
+    }
+
+    let rounds = 0;
+    let playerWon = 0;
+    let computerWon = 0;
+
     // console.log the rules for players
     console.log('The rules are as follows:');
     console.log('Scissors cuts Paper');
@@ -153,7 +176,7 @@
     console.log('Spock vaporizes Rock');
     console.log('Rock crushes Scissors');
 
-    console.log(playRound(playerSelection(), computerPlay()));
+    game();
 
   </script>
 
