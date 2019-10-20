@@ -138,15 +138,24 @@
         }
       } else if (playerSelection == 'lizard') {
         if (computerSelection == 'lizard') {
-          return 'It\'s a draw!';
+          console.log('It\'s a draw!');
+          return;
         } else if (computerSelection == 'spock') {
-          return 'You win! Lizard poisons Spock!';
+          console.log('You win! Lizard poisons Spock!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'paper') {
-          return 'You win! Lizard eats paper!';
+          console.log('You win! Lizard eats paper!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'rock') {
-          return 'You lose! Rock crushes lizard!';
+          console.log('You lose! Rock crushes lizard!');
+          computerWon++;
+          return;
         } else if (computerSelection == 'scissors') {
-          return 'You lose! Scissors decapitates lizard!';
+          console.log('You lose! Scissors decapitates lizard!');
+          computerWon++;
+          return;
         } else {
           return 'Oops! Something went wrong!';
         }
