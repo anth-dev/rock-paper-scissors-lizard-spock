@@ -161,15 +161,24 @@
         }
       } else if (playerSelection == 'spock') {
         if (computerSelection == 'spock') {
-          return 'It\'s a draw!';
+          console.log('It\'s a draw!');
+          return;
         } else if (computerSelection == 'scissors') {
-          return 'You win! Spock smashes scissors!';
+          console.log('You win! Spock smashes scissors!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'rock') {
-          return 'You win! Spock vaporizes rock!';
+          console.log('You win! Spock vaporizes rock!');
+          playerWon++;
+          return;
         } else if (computerSelection == 'lizard') {
-          return 'You lose! Lizard poisons Spock';
+          console.log('You lose! Lizard poisons Spock');
+          computerWon++;
+          return;
         } else if (computerSelection == 'paper') {
-          return 'You lose! Paper disproves Spock!';
+          console.log('You lose! Paper disproves Spock!');
+          computerWon++;
+          return;
         } else {
           return 'Oops! Something went wrong!';
         }
