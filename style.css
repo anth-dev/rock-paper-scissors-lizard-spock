@@ -126,24 +126,24 @@ footer {
 }
 
 h1 {
-    font-family: 'Anton', sans-serif;  
-    font-size: 2em;  
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.25em;  
     letter-spacing: .1em;
     padding: .5em;
 }
 
 p {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     letter-spacing: .1em;
     font-size: 1.5em;
     line-height: 1.25em;
 }
 
 ul {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 label {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-style: italic;
 }
