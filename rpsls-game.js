@@ -172,12 +172,14 @@ function game() {
   } else if (rounds > 5) {
     alert('Oops! Something went wrong!');
   }
+  rounds = 0;
+  playerWon = 0;
+  computerWon = 0;
 }
 
 let rounds = 0;
 let playerWon = 0;
 let computerWon = 0;
-let startButton = document.querySelector('button');
 
 // rules for players
 console.log('The rules are as follows:');
