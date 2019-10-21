@@ -192,5 +192,3 @@ console.log('Paper disproves Spock');
 console.log('Spock vaporizes Rock');
 console.log('Rock crushes Scissors');
 console.log('');
-  
-startButton.onclick = game();
