@@ -129,6 +129,11 @@ main {
 
 footer {
     grid-area: footer;
+    border-top: solid;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 #startButton {
@@ -139,9 +144,10 @@ footer {
     align-self: center;
     background-image: url(RPSLS.png);
     background-size: 250px;
-    background-color: grey;
+    background-color: lightblue;
     border-radius: 7em;
     background-position-y: -.25em;
+    border-color: black;
 }
 
 h1 {
@@ -167,5 +173,7 @@ ul {
 label {
     font-family: 'Fjalla One', sans-serif;
     font-style: italic;
+    position: relative;
+    bottom: .25em;
 }
 
