@@ -135,8 +135,7 @@ footer {
     padding: 10px;
     font-weight: bold;
     width: 75%;
-    position: relative;
-    left: 10%;
+    align-self: center;
 }
 
 h1 {
