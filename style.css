@@ -110,6 +110,10 @@ html, body {
 header {
     grid-area: header;
     border-bottom: solid;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 main {
@@ -117,6 +121,10 @@ main {
     padding-left: 1em;
     padding-right: 1em;
     grid-area: main;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 footer {
@@ -136,8 +144,6 @@ h1 {
     font-size: 2.25em;  
     letter-spacing: .1em;
     padding: .5em;
-    position: absolute;
-    left: 5%;
 }
 
 p {
@@ -145,14 +151,12 @@ p {
     letter-spacing: .1em;
     font-size: 1.5em;
     line-height: 1.25em;
-    padding: .5em;
+    padding: 1em;
 }
 
 ul {
     font-family: 'Fjalla One', sans-serif;
     list-style-type: none;
-    position: relative;
-    left: 25%;
 }
 
 label {
@@ -160,7 +164,3 @@ label {
     font-style: italic;
 }
 
-#consoleLabel {
-    position: relative;
-    left: 15%;
-}
