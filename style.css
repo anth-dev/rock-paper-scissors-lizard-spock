@@ -96,7 +96,7 @@ article {
     min-height: 100%;
     display: grid;
     grid-template-columns: .5fr 2fr .5fr;
-    grid-template-rows: 3em 1fr 3em;
+    grid-template-rows: 4em 1fr 4em;
     grid-template-areas:
         'header header header'
         '. main .'
@@ -113,6 +113,8 @@ header {
 
 main {
     padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     grid-area: main;
 }
 
@@ -130,6 +132,8 @@ h1 {
     font-size: 2.25em;  
     letter-spacing: .1em;
     padding: .5em;
+    position: absolute;
+    left: 5%;
 }
 
 p {
@@ -137,13 +141,22 @@ p {
     letter-spacing: .1em;
     font-size: 1.5em;
     line-height: 1.25em;
+    padding: .5em;
 }
 
 ul {
     font-family: 'Fjalla One', sans-serif;
+    list-style-type: none;
+    position: relative;
+    left: 25%;
 }
 
 label {
     font-family: 'Fjalla One', sans-serif;
     font-style: italic;
+}
+
+#consoleLabel {
+    position: relative;
+    left: 15%;
 }
