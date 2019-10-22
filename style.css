@@ -109,6 +109,7 @@ html, body {
 
 header {
     grid-area: header;
+    border-bottom: solid;
 }
 
 main {
@@ -125,6 +126,9 @@ footer {
 #startButton {
     padding: 10px;
     font-weight: bold;
+    width: 75%;
+    position: relative;
+    left: 10%;
 }
 
 h1 {
