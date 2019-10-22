@@ -144,10 +144,10 @@ footer {
     align-self: center;
     background-image: url(RPSLS.png);
     background-size: 250px;
-    background-color: lightblue;
+    background-color: cornflowerblue;
     border-radius: 7em;
     background-position-y: -.25em;
-    border-color: black;
+    border-color: grey;
 }
 
 h1 {
@@ -175,5 +175,16 @@ label {
     font-style: italic;
     position: relative;
     bottom: .25em;
+}
+
+#wikiLink {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+#odinLink {
+    color: blue;
+    text-decoration: none;
+    font-size: 1.5em;
 }
 
