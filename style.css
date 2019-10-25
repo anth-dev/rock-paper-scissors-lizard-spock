@@ -96,7 +96,7 @@ article {
     min-height: 100%;
     display: grid;
     grid-template-columns: .5fr 2fr .5fr;
-    grid-template-rows: 4em 1fr 4em;
+    grid-template-rows: 8em 1fr 4em;
     grid-template-areas:
         'header header header'
         '. main .'
@@ -151,16 +151,21 @@ footer {
     background-image: url(RPSLS.png);
     background-size: 250px;
     background-color: cornflowerblue;
+    border-style: outset;
     border-radius: 7em;
     background-position-y: -.25em;
-    border-color: grey;
+    border-color: white;
 }
 
 h1 {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 2.25em;  
+    font-size: 3em;  
     letter-spacing: .1em;
-    padding: .5em;
+    margin: 1em;
+    padding: .25em;
+    border-style: solid;
+    border-width: 3px;
+    color: black;
 }
 
 p {
