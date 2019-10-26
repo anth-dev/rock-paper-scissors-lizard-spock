@@ -209,6 +209,7 @@ label {
 
 table {
     color: white;
-    margin: .5em;
+    margin: .75em;
+    border: 3px white solid;
 }
 
