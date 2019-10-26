@@ -36,22 +36,22 @@ function playerSelection() {
 function playRound(playerSelection, computerPlay) {
   if (playerSelection == 'paper') {
     if (computerSelection == 'paper') {
-      console.log('It\'s a draw!');
+      document.getElementById('message').innerHTML = 'It\'s a draw!';
       return;
     } else if (computerSelection == 'rock') {
-      console.log('You win! Paper covers rock!');
+      document.getElementById('message').innerHTML = 'You win! Paper covers rock!';
       playerWon++;
       return;
     } else if (computerSelection == 'spock') {
-      console.log('You win! Paper disproves Spock!');
+      document.getElementById('message').innerHTML = 'You win! Paper disproves Spock!';
       playerWon++;
       return;
     } else if (computerSelection == 'scissors') {
-      console.log('You lose! Scissors cuts paper!');
+      document.getElementById('message').innerHTML  = 'You lose! Scissors cuts paper!';
       computerWon++;
       return;
     } else if (computerSelection == 'lizard') {
-      console.log('You lose! Lizard eats paper!');
+      document.getElementById('message').innerHTML = 'You lose! Lizard eats paper!';
       computerWon++;
       return;
     } else {
@@ -59,22 +59,22 @@ function playRound(playerSelection, computerPlay) {
     }
   } else if (playerSelection == 'rock') {
     if (computerSelection == 'rock') {
-      console.log('It\'s a draw!');
+      document.getElementById('message').innerHTML = 'It\'s a draw!';
       return;
     } else if (computerSelection == 'lizard') {
-      console.log('You win! Rock crushes lizard!');
+      document.getElementById('message').innerHTML = 'You win! Rock crushes lizard!';
       playerWon++;
       return;
     } else if (computerSelection == 'scissors') {
-      console.log('You win! Rock crushes scissors!');
+      document.getElementById('message').innerHTML = 'You win! Rock crushes scissors!';
       playerWon++;
       return;
     } else if (computerSelection == 'paper') {
-      console.log('You lose! Paper covers rock!');
+      document.getElementById('message').innerHTML = 'You lose! Paper covers rock!';
       computerWon++;
       return;
     } else if (computerSelection == 'spock') {
-      console.log('You lose! Spock vaporizes rock!');
+      document.getElementById('message').innerHTML = 'You lose! Spock vaporizes rock!';
       computerWon++;
       return;
     } else {
@@ -82,22 +82,22 @@ function playRound(playerSelection, computerPlay) {
     }
   } else if (playerSelection == 'scissors') {
     if (computerSelection == 'scissors') {
-      console.log('It\'s a draw!');
+      document.getElementById('message').innerHTML = 'It\'s a draw!';
       return;
     } else if (computerSelection == 'paper') {
-      console.log('You win! Scissors cuts paper!');
+      document.getElementById('message').innerHTML = 'You win! Scissors cuts paper!';
       playerWon++;
       return;
     } else if (computerSelection == 'lizard') {
-      console.log('You win! Scissors decapitates lizard!');
+      document.getElementById('message').innerHTML = 'You win! Scissors decapitates lizard!';
       playerWon++;
       return;
     } else if (computerSelection == 'spock') {
-      console.log('You lose! Spock smashes scissors!');
+      document.getElementById('message').innerHTML = 'You lose! Spock smashes scissors!';
       computerWon++;
       return;
     } else if (computerSelection == 'rock') {
-      console.log('You lose! Rock crushes scissors!');
+      document.getElementById('message').innerHTML = 'You lose! Rock crushes scissors!';
       computerWon++;
       return;
     } else {
@@ -105,22 +105,22 @@ function playRound(playerSelection, computerPlay) {
     }
   } else if (playerSelection == 'lizard') {
     if (computerSelection == 'lizard') {
-      console.log('It\'s a draw!');
+      document.getElementById('message').innerHTML = 'It\'s a draw!';
       return;
     } else if (computerSelection == 'spock') {
-      console.log('You win! Lizard poisons Spock!');
+      document.getElementById('message').innerHTML = 'You win! Lizard poisons Spock!';
       playerWon++;
       return;
     } else if (computerSelection == 'paper') {
-      console.log('You win! Lizard eats paper!');
+      document.getElementById('message').innerHTML = 'You win! Lizard eats paper!';
       playerWon++;
       return;
     } else if (computerSelection == 'rock') {
-      console.log('You lose! Rock crushes lizard!');
+      document.getElementById('message').innerHTML = 'You lose! Rock crushes lizard!';
       computerWon++;
       return;
     } else if (computerSelection == 'scissors') {
-      console.log('You lose! Scissors decapitates lizard!');
+      document.getElementById('message').innerHTML = 'You lose! Scissors decapitates lizard!';
       computerWon++;
       return;
     } else {
@@ -128,22 +128,22 @@ function playRound(playerSelection, computerPlay) {
     }
   } else if (playerSelection == 'spock') {
     if (computerSelection == 'spock') {
-      console.log('It\'s a draw!');
+      document.getElementById('message').innerHTML = 'It\'s a draw!';
       return;
     } else if (computerSelection == 'scissors') {
-      console.log('You win! Spock smashes scissors!');
+      document.getElementById('message').innerHTML = 'You win! Spock smashes scissors!';
       playerWon++;
       return;
     } else if (computerSelection == 'rock') {
-      console.log('You win! Spock vaporizes rock!');
+      document.getElementById('message').innerHTML = 'You win! Spock vaporizes rock!';
       playerWon++;
       return;
     } else if (computerSelection == 'lizard') {
-      console.log('You lose! Lizard poisons Spock');
+      document.getElementById('message').innerHTML = 'You lose! Lizard poisons Spock';
       computerWon++;
       return;
     } else if (computerSelection == 'paper') {
-      console.log('You lose! Paper disproves Spock!');
+      document.getElementById('message').innerHTML = 'You lose! Paper disproves Spock!';
       computerWon++;
       return;
     } else {
