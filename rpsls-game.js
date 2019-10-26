@@ -157,15 +157,19 @@ function game() {
     rounds++;
     console.log('Starting round ' + rounds);
     playRound(playerSelection(), computerPlay());
+    updateScore (playerWon, computerWon);
     game();
   } else if (rounds == 5) {
     console.log('Game over!');
     if (playerWon == computerWon) {
       console.log('It\'s a draw! Good game!');
+      updateScore (playerWon, computerWon);
     } else if (playerWon > computerWon) {
       console.log('You win the game!');
+      updateScore (playerWon, computerWon);
     } else if (playerWon < computerWon) {
       console.log('You lose the game!');
+      updateScore (playerWon, computerWon);
     } else {
       alert('Oops! Something went wrong!');
     }
@@ -175,6 +179,11 @@ function game() {
   rounds = 0;
   playerWon = 0;
   computerWon = 0;
+}
+
+function updateScore (playerWon, computerWon) {
+  document.getElementById('playerPoints').innerHTML = playerWon;
+  document.getElementById('computerPoints').innerHTML = computerWon;
 }
 
 let rounds = 0;
