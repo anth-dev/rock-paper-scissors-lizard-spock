@@ -17,18 +17,33 @@
     </header>
 
     <main>
-      <p>This game is played in the JavaScript console of your browser.
+
+      <p>Rock Paper Scissors Lizard Spock is a variation of Rock Paper Scissors that
+         was seen on the TV show <em>The Big Bang Theory</em>.
+      </p>
+            
+      <p>Information about the game can be found at the
+        <a id='wikiLink' href='https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock'>Big Bang Theory wiki</a>.
       </p>
 
-      <label for="ul" id='consoleLabel'>To open your console do the following</label>
-      <ul>
-        <li>Chrome: CTRL+SHIFT+J or F12</li>
-        <li>Edge: F12</li>
-        <li>Firefox: CTRL+SHIFT+K</li>
-        <li>Safari: OPTION+CMD+C</li>
+      <p>The rules are as follows:</p>
+
+      <ul id='rules'>
+        <li>Scissors cuts Paper</li> 
+        <li>Paper covers Rock</li> 
+        <li>Rock crushes Lizard</li>
+        <li>Lizard poisons Spock</li>
+        <li>Spock smashes Scissors</li>
+        <li>Scissors decapitates Lizard</li>
+        <li>Lizard eats Paper</li>
+        <li>Paper disproves Spock</li>
+        <li>Spock vaporizes Rock</li>
+        <li>Rock crushes Scissors</li>
       </ul>
 
-      <p id='display'>Original text</p>
+      <!--
+      <p id='display'>game messages will be displayed here</p>
+      -->
 
       <table>
         <tr>
@@ -40,14 +55,6 @@
           <td id='computerPoints'>NA</td>
         </tr>
       </table>
-
-      <p>Rock Paper Scissors Lizard Spock is a game of chance that was seen
-        on the TV show <em>The Big Bang Theory</em>.
-      </p>
-        
-      <p>Information about the game can be found at the
-        <a id='wikiLink' href='https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock'>Big Bang Theory wiki</a>.
-      </p>
 
       <label for='startButton'>Push button to start</label>
       <button id='startButton' onclick='game()'></button>

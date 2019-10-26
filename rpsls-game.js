@@ -189,17 +189,3 @@ function updateScore (playerWon, computerWon) {
 let rounds = 0;
 let playerWon = 0;
 let computerWon = 0;
-
-// rules for players
-console.log('The rules are as follows:');
-console.log('Scissors cuts Paper');
-console.log('Paper covers Rock');
-console.log('Rock crushes Lizard');
-console.log('Lizard poisons Spock');
-console.log('Spock smashes Scissors');
-console.log('Scissors decapitates Lizard');
-console.log('Lizard eats Paper');
-console.log('Paper disproves Spock');
-console.log('Spock vaporizes Rock');
-console.log('Rock crushes Scissors');
-console.log('');
