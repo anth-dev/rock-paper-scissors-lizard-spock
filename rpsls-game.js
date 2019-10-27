@@ -163,13 +163,10 @@ function game() {
     alert('Game over!');
     if (playerWon == computerWon) {
       alert('It\'s a draw! Good game!');
-      alertScore (playerWon, computerWon);
     } else if (playerWon > computerWon) {
       alert('You win the game!');
-      alertScore (playerWon, computerWon);
     } else if (playerWon < computerWon) {
       alert('You lose the game!');
-      alertScore (playerWon, computerWon);
     } else {
       alert('Oops! Something went wrong!');
     }
