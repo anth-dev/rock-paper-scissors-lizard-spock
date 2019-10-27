@@ -162,11 +162,11 @@ function game() {
   } else if (rounds == 5) {
     alert('Game over!');
     if (playerWon == computerWon) {
-      alert('It\'s a draw! Good game!');
+      alert(`It's a draw! You tied with ${opponent}!`);
     } else if (playerWon > computerWon) {
-      alert('You win the game!');
+      alert(`You win! You beat ${opponent}!`);
     } else if (playerWon < computerWon) {
-      alert('You lose the game!');
+      alert(`You lose! ${opponent} beat you!`);
     } else {
       alert('Oops! Something went wrong!');
     }
@@ -214,6 +214,8 @@ function pickOpponent () {
   } else if (generatedNumber < 10) {
     opponent = 'Emily'
     alert(`You're opponent is ${opponent}!`)
+  } else {
+    alert('Oop! Something went wrong!');
   }
 }
 
