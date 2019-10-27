@@ -179,7 +179,7 @@ function game() {
 }
 
 function alertScore (playerWon, computerWon) {
-  alert('Player Score: ' + playerWon + ' Computer Score: ' + computerWon);
+  alert('Player Score: ' + playerWon + ` ${opponent}'s Score: ` + computerWon);
 }
 
 function pickOpponent () {
