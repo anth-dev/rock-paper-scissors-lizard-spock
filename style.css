@@ -197,7 +197,7 @@ label {
     color: white;
 }
 
-#wikiLink {
+.link {
     text-decoration: none;
     color: cornflowerblue;
 }

@@ -182,6 +182,42 @@ function alertScore (playerWon, computerWon) {
   alert('Player Score: ' + playerWon + ' Computer Score: ' + computerWon);
 }
 
+function pickOpponent () {
+  let generatedNumber = Math.floor(Math.random()*10)
+  if (generatedNumber < 1) {
+    opponent = 'Leonard';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 2) {
+    opponent = 'Sheldon';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 3) {
+    opponent = 'Penny';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 4) {
+    opponent = 'Howard';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 5) {
+    opponent = 'Raj';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 6) {
+    opponent = 'Stuart';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 7) {
+    opponent = 'Leslie';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 8) {
+    opponent = 'Amy';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 9) {
+    opponent = 'Bernadette';
+    alert(`You're opponent is ${opponent}!`)
+  } else if (generatedNumber < 10) {
+    opponent = 'Emily'
+    alert(`You're opponent is ${opponent}!`)
+  }
+}
+
 let rounds = 0;
 let playerWon = 0;
 let computerWon = 0;
+let opponent = null;
