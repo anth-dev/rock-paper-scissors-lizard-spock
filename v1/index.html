@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors Lizard Spock</title>
+  <script src="rpsls-game.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='style.css'>
+  <link rel='icon' type='image/png' href='favicon.png'>
+</head>
+
+<!-- This is my solution to the Rock Paper Scissors game for The Odin Project -->
+
+<body>
+  <article>
+    <header>
+      <h1>Rock Paper Scissors Lizard Spock</h1>
+    </header>
+
+    <main>
+
+      <p>Rock Paper Scissors Lizard Spock is a variation of Rock Paper Scissors that
+         was seen on the TV show <em>The Big Bang Theory</em>. It was created by 
+         <a class='link' target='_blank' href='https://www.cafepress.com/samkass'>Sam Kass</a>.
+      </p>
+            
+      <p>Information about the game can be found at the
+        <a class='link' target='_blank' href='https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock'>Big Bang Theory wiki</a>.
+      </p>
+
+      <p>The rules are as follows:</p>
+
+      <ul id='rules'>
+        <li>Scissors cuts Paper</li> 
+        <li>Paper covers Rock</li> 
+        <li>Rock crushes Lizard</li>
+        <li>Lizard poisons Spock</li>
+        <li>Spock smashes Scissors</li>
+        <li>Scissors decapitates Lizard</li>
+        <li>Lizard eats Paper</li>
+        <li>Paper disproves Spock</li>
+        <li>Spock vaporizes Rock</li>
+        <li>Rock crushes Scissors</li>
+      </ul>
+
+      <label for='startButton'>Push button to start</label>
+      <button id='startButton' onclick='pickOpponent(), game()'></button>
+    </main>
+
+    <footer>
+      <a id='odinLink' target='_blank' href='http://www.theodinproject.com'>Learn how to code for free with The Odin Project</a>
+    </footer>
+  </article>
+</body>
+
+</html>
