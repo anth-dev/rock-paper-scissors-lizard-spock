@@ -234,7 +234,7 @@ function updatePlayerScoreboard (updatedScoreMessage) {
 
 function updateComputerScoreboard (updatedScoreMessage) {
   let computerScoreboard = document.querySelector('#computerScoreboard');
-  
+  computerScoreboard.textContent = updatedScoreMessage;
 }
 
 let rounds = 0;
