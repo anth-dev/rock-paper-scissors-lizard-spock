@@ -167,6 +167,8 @@ footer {
 #gameMessages {
     height: 2em;
     border: 3px solid;
+    align-items: center;
+    padding: 1em;
 }
 
 #scoreboard {
@@ -178,11 +180,13 @@ footer {
 #playerScoreboard {
     border: 3px solid;
     margin: 1em;
+    padding: 1em;
 }
 
 #computerScoreboard {
     border: 3px solid;
     margin: 1em;
+    padding: 1em;
 }
 
 .selectionButtons {
@@ -194,7 +198,6 @@ footer {
     border-style: outset;
     font-family: 'Fjalla One', sans-serif;
     font-style: italic;
-    /* bottom: .25em; */
     color: white;
 }
 
