@@ -179,7 +179,7 @@ footer {
     height: 2em;
     border: 3px solid;
     align-items: center;
-    padding: 1em;
+    padding: .5em;
 }
 
 #scoreboard {
@@ -191,13 +191,13 @@ footer {
 #playerScoreboard {
     border: 3px solid;
     margin: 1em;
-    padding: 1em;
+    padding: .5em;
 }
 
 #computerScoreboard {
     border: 3px solid;
     margin: 1em;
-    padding: 1em;
+    padding: .5em;
 }
 
 .selectionButtons {
