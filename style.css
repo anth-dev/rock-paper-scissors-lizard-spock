@@ -160,8 +160,16 @@ footer {
 }
 
 .selectionButtons {
-    padding: 1em;
+    padding: 2em;
     margin: 1em;
+    border-radius: 100%;
+    background-color: cornflowerblue;
+    border-color: white;
+    border-style: outset;
+    font-family: 'Fjalla One', sans-serif;
+    font-style: italic;
+    /* bottom: .25em; */
+    color: white;
 }
 
 #selectionButtonContainer {
