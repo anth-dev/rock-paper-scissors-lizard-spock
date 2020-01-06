@@ -155,25 +155,27 @@ function playRound(playerSelection, computerPlay) {
 
 // #1 Write a new function to replace game. When the game is started it should set rounds, playerWon, and computerWon to 0.
 function game() {
-  if (rounds < 5) {
-    rounds++;
-    alert('Starting round ' + rounds);
-    playRound(playerSelection(), computerPlay());
-    alertScore (playerWon, computerWon);
-    game();
+  if (rounds == 0) {
+    rounds++
+    pickOpponent();
+    updateMessage('Starting round ' + rounds + '. Your opponent is ' + opponent + '. Make your selection below');
+    updatePlayerScoreboard('Player: ' + playerWon);
+    updateComputerScoreboard(opponent + ': ' + computerWon);
+  } else if (rounds < 5) {
+    rounds++
+    updateMessage('Starting round ' + rounds + '.');
+    updatePlayerScoreboard('Player: ' + playerWon);
+    updateComputerScoreboard(opponent + ': ' + computerWon);
   } else if (rounds == 5) {
-    alert('Game over!');
     if (playerWon == computerWon) {
-      alert(`It's a draw! You tied with ${opponent}!`);
+      updateMessage('Game over! You tied with ' + opponent + '.');
     } else if (playerWon > computerWon) {
-      alert(`You win! You beat ${opponent}!`);
+      updateMessage('Game over! You beat ' + opponent + '!');
     } else if (playerWon < computerWon) {
-      alert(`You lose! ${opponent} beat you!`);
+      updateMessage('Game over! ' + opponent + ' beat you!');
     } else {
-      alert('Oops! Something went wrong!');
+      updateMessage('Oops! Something went wrong!');
     }
-  } else if (rounds > 5) {
-    alert('Oops! Something went wrong!');
   }
   rounds = 0;
   playerWon = 0;
@@ -181,58 +183,48 @@ function game() {
 }
 
 // #2 Change the alertScore function to instead show the score on the page
-function alertScore (playerWon, computerWon) {
+function alertScore(playerWon, computerWon) {
   alert('Player Score: ' + playerWon + ` ${opponent}'s Score: ` + computerWon);
 }
 
-function pickOpponent () {
+// Change the pickOpponent function to instead return 
+function pickOpponent() {
   let generatedNumber = Math.floor(Math.random()*10)
   if (generatedNumber < 1) {
     opponent = 'Leonard';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 2) {
     opponent = 'Sheldon';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 3) {
     opponent = 'Penny';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 4) {
     opponent = 'Howard';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 5) {
     opponent = 'Raj';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 6) {
     opponent = 'Stuart';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 7) {
     opponent = 'Leslie';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 8) {
     opponent = 'Amy';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 9) {
     opponent = 'Bernadette';
-    alert(`You're opponent is ${opponent}!`)
   } else if (generatedNumber < 10) {
     opponent = 'Emily'
-    alert(`You're opponent is ${opponent}!`)
   } else {
-    alert('Oop! Something went wrong!');
   }
 }
 
-function updateMessage (message) {
+function updateMessage(message) {
   let gameMessages = document.querySelector('#gameMessages');
   gameMessages.textContent = message;
 }
 
-function updatePlayerScoreboard (updatedScoreMessage) {
+function updatePlayerScoreboard(updatedScoreMessage) {
   let playerScoreboard = document.querySelector('#playerScoreboard');
   playerScoreboard.textContent = updatedScoreMessage;
 }
 
-function updateComputerScoreboard (updatedScoreMessage) {
+function updateComputerScoreboard(updatedScoreMessage) {
   let computerScoreboard = document.querySelector('#computerScoreboard');
   computerScoreboard.textContent = updatedScoreMessage;
 }
