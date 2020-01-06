@@ -159,6 +159,32 @@ footer {
     border-color: white;
 }
 
+#scoreAndMessageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#gameMessages {
+    height: 2em;
+    border: 3px solid;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#playerScoreboard {
+    border: 3px solid;
+    margin: 1em;
+}
+
+#computerScoreboard {
+    border: 3px solid;
+    margin: 1em;
+}
+
 .selectionButtons {
     padding: 2em;
     margin: 1em;
