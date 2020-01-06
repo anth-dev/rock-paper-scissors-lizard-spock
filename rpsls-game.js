@@ -222,6 +222,21 @@ function pickOpponent () {
   }
 }
 
+function updateMessage (message) {
+  let gameMessages = document.querySelector('#gameMessages');
+  gameMessages.textContent = message;
+}
+
+function updatePlayerScoreboard (updatedScoreMessage) {
+  let playerScoreboard = document.querySelector('#playerScoreboard');
+  playerScoreboard.textContent = updatedScoreMessage;
+}
+
+function updateComputerScoreboard (updatedScoreMessage) {
+  let computerScoreboard = document.querySelector('#computerScoreboard');
+  
+}
+
 let rounds = 0;
 let playerWon = 0;
 let computerWon = 0;
