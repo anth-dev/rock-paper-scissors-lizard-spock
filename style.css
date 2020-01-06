@@ -143,6 +143,14 @@ footer {
     background-color: cornflowerblue;
 }
 
+#startButtonLabel {
+    font-family: 'Fjalla One', sans-serif;
+    font-style: italic;
+    position: relative;
+    bottom: .25em;
+    color: white;
+}
+
 #startButton {
     padding: 1em;
     margin-bottom: 1em;
@@ -162,6 +170,9 @@ footer {
 #scoreAndMessageContainer {
     display: flex;
     flex-direction: column;
+    font-family: 'Fjalla One', sans-serif;
+    font-style: italic;
+    color: white;
 }
 
 #gameMessages {
@@ -235,14 +246,6 @@ ul {
     line-height: 1.25em;
     margin-bottom: 1em;
     padding: 1em;
-}
-
-label {
-    font-family: 'Fjalla One', sans-serif;
-    font-style: italic;
-    position: relative;
-    bottom: .25em;
-    color: white;
 }
 
 .link {
