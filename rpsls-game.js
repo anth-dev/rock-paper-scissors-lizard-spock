@@ -33,6 +33,7 @@ function playerSelection() {
   return userInput;
 }
 
+// #3 When a player clicks on one of the selectionButtons it should run the playRound function.
 function playRound(playerSelection, computerPlay) {
   if (playerSelection == 'paper') {
     if (computerSelection == 'paper') {
@@ -152,6 +153,7 @@ function playRound(playerSelection, computerPlay) {
   }
 }
 
+// #1 Write a new function to replace game. When the game is started it should set rounds, playerWon, and computerWon to 0.
 function game() {
   if (rounds < 5) {
     rounds++;
@@ -178,6 +180,7 @@ function game() {
   computerWon = 0;
 }
 
+// #2 Change the alertScore function to instead show the score on the page
 function alertScore (playerWon, computerWon) {
   alert('Player Score: ' + playerWon + ` ${opponent}'s Score: ` + computerWon);
 }
