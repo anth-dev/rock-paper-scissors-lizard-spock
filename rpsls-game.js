@@ -43,30 +43,30 @@ function playRound(playerSelection, computerPlay) {
     // working on rock first. use it as a template for the others
   } else if (playerSelection == 'rock') {
     if (computerSelection == 'rock') {
-      updateMessage('It\'s a draw!');
+      updateMessage('It\'s a draw! Push button above to continue.');
       updatePlayerScoreboard();
       updateComputerScoreboard();
       return;
     } else if (computerSelection == 'lizard') {
-      updateMessage('You win! Rock crushes lizard!');
+      updateMessage('You win! Rock crushes lizard! Push button above to continue.');
       playerWon++;
       updatePlayerScoreboard();
       updateComputerScoreboard();
       return;
     } else if (computerSelection == 'scissors') {
-      updateMessage('You win! Rock crushes scissors!');
+      updateMessage('You win! Rock crushes scissors! Push button above to continue.');
       playerWon++;
       updatePlayerScoreboard();
       updateComputerScoreboard();
       return;
     } else if (computerSelection == 'paper') {
-      updateMessage('You lose! Paper covers rock!');
+      updateMessage('You lose! Paper covers rock! Push button above to continue.');
       computerWon++;
       updatePlayerScoreboard();
       updateComputerScoreboard();
       return;
     } else if (computerSelection == 'spock') {
-      updateMessage('You lose! Spock vaporizes rock!');
+      updateMessage('You lose! Spock vaporizes rock! Push button above to continue.');
       computerWon++;
       updatePlayerScoreboard();
       updateComputerScoreboard();
