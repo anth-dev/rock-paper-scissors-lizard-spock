@@ -160,19 +160,17 @@ function game() {
   } else if (rounds == 5) {
     if (playerWon == computerWon) {
       updateMessage('Game over! You tied with ' + opponent + '.');
+      reset();
     } else if (playerWon > computerWon) {
       updateMessage('Game over! You beat ' + opponent + '!');
+      reset();
     } else if (playerWon < computerWon) {
       updateMessage('Game over! ' + opponent + ' beat you!');
+      reset();
     } else {
-      updateMessage('Oops! Something went wrong!');
+      updateMessage('Oops! Something went wrong executing the game function!');
     }
   }
-  // Not sure if the following is needed since they are declared at the end of the file, I think they were used to restart the game after
-  // finishing. I don't remember anymore.
-  rounds = 0;
-  playerWon = 0;
-  computerWon = 0;
 }
 
 function pickOpponent() {
@@ -214,6 +212,12 @@ function updatePlayerScoreboard() {
 function updateComputerScoreboard() {
   let computerScoreboard = document.querySelector('#computerScoreboard');
   computerScoreboard.textContent = opponent + ': ' + computerWon;
+}
+
+function reset() {
+  rounds = 0;
+  playerWon = 0;
+  computerWon = 0;
 }
 
 let rounds = 0;
