@@ -213,7 +213,8 @@ footer {
 }
 
 #selectionButtonContainer {
-    display: flex;
+    /* by default will be hidden, in JS will change to display: flex */
+    display: none;
     justify-content: center;
 }
 
