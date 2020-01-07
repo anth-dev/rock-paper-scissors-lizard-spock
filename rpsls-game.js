@@ -72,7 +72,7 @@ function playRound(playerSelection, computerPlay) {
       updateComputerScoreboard();
       return;
     } else {
-      updateMessage('Oops! Something went wrong with the playRound function!');
+      updateMessage('Oops! Something went wrong executing the playRound function!');
     }
   } else if (playerSelection == 'scissors') {
     if (computerSelection == 'scissors') {
@@ -224,5 +224,5 @@ let computerSelection = null;
 let playerSelection = null;
 
 // make variables to link to each selectionButton for an onclick event
-let rockButton = document.querySelector('#rockbutton');
-rockButton.onclick = playRound('rock', computerPlay);
+let rockButton = document.querySelector('#rockButton');
+rockButton.addEventListener('click', playRound('rock', computerPlay));
