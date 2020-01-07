@@ -229,6 +229,8 @@ let playerSelection = null;
 
 // more variables and listeners can be added to this same document.addEventListener
 document.addEventListener("DOMContentLoaded", function(event) { 
+  let startButton = document.querySelector('#startButton');
+  startButton.addEventListener('click', function () {game()});
   let rockButton = document.querySelector('#rockButton');
   // for some reason each time you click the button it picks a new opponent?
   rockButton.addEventListener('click', function () {playRound('rock', computerPlay)});
