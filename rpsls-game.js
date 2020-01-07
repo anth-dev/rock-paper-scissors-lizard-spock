@@ -86,26 +86,36 @@ function playRound(playerSelection, computerPlay) {
     }
   } else if (playerSelection == 'scissors') {
     if (computerSelection == 'scissors') {
-      alert('It\'s a draw!');
+      updateMessage('It\'s a draw! Push button above to continue.');
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'paper') {
-      alert('You win! Scissors cuts paper!');
+      updateMessage('You win! Scissors cuts paper! Push button above to continue.');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'lizard') {
-      alert('You win! Scissors decapitates lizard!');
+      updateMessage('You win! Scissors decapitates lizard! Push button above to continue.');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'spock') {
-      alert('You lose! Spock smashes scissors!');
+      updateMessage('You lose! Spock smashes scissors! Push button above to continue.');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'rock') {
-      alert('You lose! Rock crushes scissors!');
+      updateMessage('You lose! Rock crushes scissors! Push button above to continue.');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else {
-      return 'Oops! Something went wrong!';
+      updateMessage('Oops! Something went wrong executing the playRound function!');
     }
   } else if (playerSelection == 'lizard') {
     if (computerSelection == 'lizard') {
@@ -168,13 +178,13 @@ function game() {
     updateMessage('Starting round ' + rounds + '.');
   } else if (rounds == 5) {
     if (playerWon == computerWon) {
-      updateMessage('Game over! You tied with ' + opponent + '.');
+      updateMessage('Game over! You tied with ' + opponent + '. Push button above to play again.');
       reset();
     } else if (playerWon > computerWon) {
-      updateMessage('Game over! You beat ' + opponent + '!');
+      updateMessage('Game over! You beat ' + opponent + '! Push button above to play again.');
       reset();
     } else if (playerWon < computerWon) {
-      updateMessage('Game over! ' + opponent + ' beat you!');
+      updateMessage('Game over! ' + opponent + ' beat you! Push button above to play again.');
       reset();
     } else {
       updateMessage('Oops! Something went wrong executing the game function!');
@@ -243,4 +253,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   rockButton.addEventListener('click', function () {playRound('rock', computerPlay)});
   let paperButton = document.querySelector('#paperButton');
   paperButton.addEventListener('click', function () {playRound('paper', computerPlay)});
+  let scissorsButton = document.querySelector('#scissorsButton');
+  scissorsButton.addEventListener('click', function () {playRound('scissors', computerPlay)});
 });
