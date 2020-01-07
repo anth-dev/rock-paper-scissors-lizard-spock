@@ -14,27 +14,9 @@ function computerPlay() {
   return computerSelection;
 }
 
-function playerSelection() {
-  userInput = prompt('Enter your choice');
-  userInput = userInput.toLowerCase();
-  if (userInput == 'rock') {
-    alert('You have selected rock.');
-  } else if (userInput == 'paper') {
-    alert('You have selected paper.');
-  } else if (userInput == 'scissors') {
-    alert('You have selected scissors.');
-  } else if (userInput == 'lizard') {
-    alert('You have selected lizard.');
-  } else if (userInput == 'spock') {
-    alert('You have selected Spock.');
-  } else {
-    alert('invalid selection');
-  }
-  return userInput;
-}
-
 // #3 When a player clicks on one of the selectionButtons it should run the playRound function.
 function playRound(playerSelection, computerPlay) {
+  computerPlay();
   if (playerSelection == 'paper') {
     if (computerSelection == 'paper') {
       alert('It\'s a draw!');
@@ -58,25 +40,36 @@ function playRound(playerSelection, computerPlay) {
     } else {
       return 'Oops! Something went wrong!';
     }
+    // working on rock first. use it as a template for the others
   } else if (playerSelection == 'rock') {
     if (computerSelection == 'rock') {
-      alert('It\'s a draw!');
+      updateMessage('It\'s a draw!');
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'lizard') {
-      alert('You win! Rock crushes lizard!');
+      updateMessage('You win! Rock crushes lizard!');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'scissors') {
-      alert('You win! Rock crushes scissors!');
+      updateMessage('You win! Rock crushes scissors!');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'paper') {
-      alert('You lose! Paper covers rock!');
+      updateMessage('You lose! Paper covers rock!');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'spock') {
-      alert('You lose! Spock vaporizes rock!');
+      updateMessage('You lose! Spock vaporizes rock!');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else {
       return 'Oops! Something went wrong!';
@@ -182,12 +175,6 @@ function game() {
   computerWon = 0;
 }
 
-// #2 Change the alertScore function to instead show the score on the page
-function alertScore(playerWon, computerWon) {
-  alert('Player Score: ' + playerWon + ` ${opponent}'s Score: ` + computerWon);
-}
-
-// Change the pickOpponent function to instead return 
 function pickOpponent() {
   let generatedNumber = Math.floor(Math.random()*10)
   if (generatedNumber < 1) {
@@ -219,17 +206,23 @@ function updateMessage(message) {
   gameMessages.textContent = message;
 }
 
-function updatePlayerScoreboard(updatedScoreMessage) {
+function updatePlayerScoreboard() {
   let playerScoreboard = document.querySelector('#playerScoreboard');
-  playerScoreboard.textContent = updatedScoreMessage;
+  playerScoreboard.textContent = 'Player: ' + playerWon;
 }
 
-function updateComputerScoreboard(updatedScoreMessage) {
+function updateComputerScoreboard() {
   let computerScoreboard = document.querySelector('#computerScoreboard');
-  computerScoreboard.textContent = updatedScoreMessage;
+  computerScoreboard.textContent = opponent + ': ' + computerWon;
 }
 
 let rounds = 0;
 let playerWon = 0;
 let computerWon = 0;
 let opponent = null;
+let computerSelection = null;
+let playerSelection = null;
+
+// make variables to link to each selectionButton for an onclick event
+let rockButton = document.querySelector('#rockbutton');
+rockButton.onclick = playRound('rock', computerPlay);
