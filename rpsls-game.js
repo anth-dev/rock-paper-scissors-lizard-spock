@@ -147,7 +147,7 @@ function playRound(playerSelection, computerPlay) {
 }
 
 function game() {
-  if (rounds == 0) {
+  if (rounds === 0) {
     rounds++
     pickOpponent();
     updateMessage('Starting round ' + rounds + '. Your opponent is ' + opponent + '. Make your selection below');
