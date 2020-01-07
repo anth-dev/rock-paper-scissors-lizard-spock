@@ -72,7 +72,7 @@ function playRound(playerSelection, computerPlay) {
       updateComputerScoreboard();
       return;
     } else {
-      return 'Oops! Something went wrong!';
+      updateMessage('Oops! Something went wrong with the playRound function!');
     }
   } else if (playerSelection == 'scissors') {
     if (computerSelection == 'scissors') {
@@ -157,8 +157,6 @@ function game() {
   } else if (rounds < 5) {
     rounds++
     updateMessage('Starting round ' + rounds + '.');
-    updatePlayerScoreboard('Player: ' + playerWon);
-    updateComputerScoreboard(opponent + ': ' + computerWon);
   } else if (rounds == 5) {
     if (playerWon == computerWon) {
       updateMessage('Game over! You tied with ' + opponent + '.');
@@ -170,6 +168,8 @@ function game() {
       updateMessage('Oops! Something went wrong!');
     }
   }
+  // Not sure if the following is needed since they are declared at the end of the file, I think they were used to restart the game after
+  // finishing. I don't remember anymore.
   rounds = 0;
   playerWon = 0;
   computerWon = 0;
