@@ -14,7 +14,6 @@ function computerPlay() {
   return computerSelection;
 }
 
-// #3 When a player clicks on one of the selectionButtons it should run the playRound function with the playerSelection filled in
 function playRound(playerSelection, computerPlay) {
   computerPlay();
   if (playerSelection == 'paper') {
