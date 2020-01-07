@@ -14,7 +14,7 @@ function computerPlay() {
   return computerSelection;
 }
 
-// #3 When a player clicks on one of the selectionButtons it should run the playRound function.
+// #3 When a player clicks on one of the selectionButtons it should run the playRound function with the playerSelection filled in
 function playRound(playerSelection, computerPlay) {
   computerPlay();
   if (playerSelection == 'paper') {
@@ -146,7 +146,6 @@ function playRound(playerSelection, computerPlay) {
   }
 }
 
-// #1 Write a new function to replace game. When the game is started it should set rounds, playerWon, and computerWon to 0.
 function game() {
   if (rounds == 0) {
     rounds++
@@ -231,5 +230,6 @@ let playerSelection = null;
 // more variables and listeners can be added to this same document.addEventListener
 document.addEventListener("DOMContentLoaded", function(event) { 
   let rockButton = document.querySelector('#rockButton');
+  // for some reason each time you click the button it picks a new opponent?
   rockButton.addEventListener('click', function () {playRound('rock', computerPlay)});
 });
