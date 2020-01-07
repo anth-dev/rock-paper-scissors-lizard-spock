@@ -19,26 +19,36 @@ function playRound(playerSelection, computerPlay) {
   computerPlay();
   if (playerSelection == 'paper') {
     if (computerSelection == 'paper') {
-      alert('It\'s a draw!');
+      updateMessage('It\'s a draw! Push button above to continue.');
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'rock') {
-      alert('You win! Paper covers rock!');
+      updateMessage('You win! Paper covers rock! Push button above to continue.');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'spock') {
-      alert('You win! Paper disproves Spock!');
+      updateMessage('You win! Paper disproves Spock! Push button above to continue.');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'scissors') {
-      alert('You lose! Scissors cuts paper!');
+      updateMessage('You lose! Scissors cuts paper! Push button above to continue.');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'lizard') {
-      alert('You lose! Lizard eats paper!');
+      updateMessage('You lose! Lizard eats paper! Push button above to continue.');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else {
-      return 'Oops! Something went wrong!';
+      updateMessage('Oops! Something went wrong executing the playRound function!');
     }
     // working on rock first. use it as a template for the others
   } else if (playerSelection == 'rock') {
@@ -226,12 +236,11 @@ let opponent = null;
 let computerSelection = null;
 let playerSelection = null;
 
-
-// more variables and listeners can be added to this same document.addEventListener
 document.addEventListener("DOMContentLoaded", function(event) { 
   let startButton = document.querySelector('#startButton');
   startButton.addEventListener('click', function () {game()});
   let rockButton = document.querySelector('#rockButton');
-  // for some reason each time you click the button it picks a new opponent?
   rockButton.addEventListener('click', function () {playRound('rock', computerPlay)});
+  let paperButton = document.querySelector('#paperButton');
+  paperButton.addEventListener('click', function () {playRound('paper', computerPlay)});
 });
