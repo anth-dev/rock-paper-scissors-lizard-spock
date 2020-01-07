@@ -19,37 +19,27 @@ function playRound(playerSelection, computerPlay) {
   if (playerSelection == 'paper') {
     if (computerSelection == 'paper') {
       updateMessage('It\'s a draw! Push button above to continue.');
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'rock') {
       updateMessage('You win! Paper covers rock! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'spock') {
       updateMessage('You win! Paper disproves Spock! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'scissors') {
       updateMessage('You lose! Scissors cuts paper! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'lizard') {
       updateMessage('You lose! Lizard eats paper! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else {
       updateMessage('Oops! Something went wrong executing the playRound function!');
@@ -57,37 +47,27 @@ function playRound(playerSelection, computerPlay) {
   } else if (playerSelection == 'rock') {
     if (computerSelection == 'rock') {
       updateMessage('It\'s a draw! Push button above to continue.');
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'lizard') {
       updateMessage('You win! Rock crushes lizard! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'scissors') {
       updateMessage('You win! Rock crushes scissors! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'paper') {
       updateMessage('You lose! Paper covers rock! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'spock') {
       updateMessage('You lose! Spock vaporizes rock! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else {
       updateMessage('Oops! Something went wrong executing the playRound function!');
@@ -96,37 +76,27 @@ function playRound(playerSelection, computerPlay) {
   } else if (playerSelection == 'scissors') {
     if (computerSelection == 'scissors') {
       updateMessage('It\'s a draw! Push button above to continue.');
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'paper') {
       updateMessage('You win! Scissors cuts paper! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'lizard') {
       updateMessage('You win! Scissors decapitates lizard! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'spock') {
       updateMessage('You lose! Spock smashes scissors! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'rock') {
       updateMessage('You lose! Rock crushes scissors! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else {
       updateMessage('Oops! Something went wrong executing the playRound function!');
@@ -135,37 +105,27 @@ function playRound(playerSelection, computerPlay) {
   } else if (playerSelection == 'lizard') {
     if (computerSelection == 'lizard') {
       updateMessage('It\'s a draw! Push button above to continue.');
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'spock') {
       updateMessage('You win! Lizard poisons Spock! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'paper') {
       updateMessage('You win! Lizard eats paper! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'rock') {
       updateMessage('You lose! Rock crushes lizard! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'scissors') {
       updateMessage('You lose! Scissors decapitates lizard! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else {
       updateMessage('Oops! Something went wrong executing the playRound function!');
@@ -174,43 +134,39 @@ function playRound(playerSelection, computerPlay) {
   } else if (playerSelection == 'spock') {
     if (computerSelection == 'spock') {
       updateMessage('It\'s a draw! Push button above to continue.');
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'scissors') {
       updateMessage('You win! Spock smashes scissors! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'rock') {
       updateMessage('You win! Spock vaporizes rock! Push button above to continue.');
       playerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'lizard') {
       updateMessage('You lose! Lizard poisons Spock! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else if (computerSelection == 'paper') {
       updateMessage('You lose! Paper disproves Spock! Push button above to continue.');
       computerWon++;
-      updatePlayerScoreboard();
-      updateComputerScoreboard();
-      toggleHidden();
+      endRound();
       return;
     } else {
       updateMessage('Oops! Something went wrong executing the playRound function!');
       return;
     }
   }
+}
+
+function endRound() {
+  updatePlayerScoreboard();
+  updateComputerScoreboard();
+  toggleHidden();
 }
 
 function game() {
@@ -303,7 +259,7 @@ let computerWon = 0;
 let opponent = null;
 let computerSelection = null;
 let playerSelection = null;
-// This initial toggle is needed to make it work properly
+// This initial toggle is needed to make the function work properly with the game.
 toggleHidden();
 
 document.addEventListener("DOMContentLoaded", function(event) { 
