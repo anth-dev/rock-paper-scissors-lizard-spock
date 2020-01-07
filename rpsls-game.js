@@ -225,4 +225,5 @@ let playerSelection = null;
 
 // make variables to link to each selectionButton for an onclick event
 let rockButton = document.querySelector('#rockButton');
-rockButton.addEventListener('click', playRound('rock', computerPlay));
+// rockButton.addEventListener('click', playRound('rock', computerPlay));
+rockButton.onclick = playRound('rock', computerPlay);
