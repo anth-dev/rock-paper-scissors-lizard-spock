@@ -154,26 +154,37 @@ function playRound(playerSelection, computerPlay) {
     }
   } else if (playerSelection == 'spock') {
     if (computerSelection == 'spock') {
-      alert('It\'s a draw!');
+      updateMessage('It\'s a draw! Push button above to continue.');
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'scissors') {
-      alert('You win! Spock smashes scissors!');
+      updateMessage('You win! Spock smashes scissors! Push button above to continue.');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'rock') {
-      alert('You win! Spock vaporizes rock!');
+      updateMessage('You win! Spock vaporizes rock! Push button above to continue.');
       playerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'lizard') {
-      alert('You lose! Lizard poisons Spock');
+      updateMessage('You lose! Lizard poisons Spock! Push button above to continue.');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else if (computerSelection == 'paper') {
-      alert('You lose! Paper disproves Spock!');
+      updateMessage('You lose! Paper disproves Spock! Push button above to continue.');
       computerWon++;
+      updatePlayerScoreboard();
+      updateComputerScoreboard();
       return;
     } else {
-      return 'Oops! Something went wrong!';
+      updateMessage('Oops! Something went wrong executing the playRound function!');
+      return;
     }
   }
 }
@@ -269,5 +280,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   scissorsButton.addEventListener('click', function () {playRound('scissors', computerPlay)});
   let lizardButton = document.querySelector('#lizardButton');
   lizardButton.addEventListener('click', function () {playRound('lizard', computerPlay)});
-
+  let spockButton = document.querySelector('#spockButton');
+  spockButton.addEventListener('click', function () {playRound('spock', computerPlay)});
 });
