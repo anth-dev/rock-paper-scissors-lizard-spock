@@ -181,12 +181,14 @@ footer {
     align-items: center;
     padding: .5em;
     padding-top: 1.5em;
+    font-size: 1.5em;
 }
 
 #scoreboard {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-size: 1.5em;
 }
 
 #playerScoreboard {
